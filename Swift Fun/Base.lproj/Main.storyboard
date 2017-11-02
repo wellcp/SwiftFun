@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eE3-ud-rVu">
-                                <rect key="frame" x="155" y="371" width="64" height="30"/>
+                                <rect key="frame" x="155.5" y="371" width="64" height="30"/>
                                 <state key="normal" title="Hit me =)"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rq4-wx-toA"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rJb-yN-bhs">
-                                <rect key="frame" x="141" y="323" width="93.5" height="20.5"/>
+                                <rect key="frame" x="141" y="323.5" width="93.5" height="20.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="P8M-ud-7DI">
                                         <rect key="frame" x="0.0" y="0.0" width="93.5" height="20.5"/>
@@ -41,18 +41,50 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7E-Xe-9Dy">
+                                <rect key="frame" x="137.5" y="271.5" width="100" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Text"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="qmz-Qo-asB"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMG-AN-rU4">
+                                <rect key="frame" x="137.5" y="211.5" width="100" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Text"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="q7a-JG-hS9"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4mC-3m-HCU">
+                                <rect key="frame" x="163" y="153" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="4mC-3m-HCU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0VU-Jv-8n3"/>
                             <constraint firstItem="rJb-yN-bhs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2SA-mt-Auy"/>
+                            <constraint firstItem="FMG-AN-rU4" firstAttribute="top" secondItem="4mC-3m-HCU" secondAttribute="bottom" constant="27.5" id="6lM-as-2ZK"/>
                             <constraint firstItem="eE3-ud-rVu" firstAttribute="top" secondItem="N3k-hU-6G8" secondAttribute="bottom" constant="27.5" id="8OT-Cb-FHe"/>
                             <constraint firstItem="rJb-yN-bhs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ANk-Td-NsY"/>
+                            <constraint firstItem="FMG-AN-rU4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dwl-Sq-kxf"/>
+                            <constraint firstItem="o7E-Xe-9Dy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FzS-eh-gi4"/>
+                            <constraint firstItem="N3k-hU-6G8" firstAttribute="top" secondItem="o7E-Xe-9Dy" secondAttribute="bottom" constant="22" id="H3d-JC-35S"/>
                             <constraint firstItem="eE3-ud-rVu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NCO-YN-OgR"/>
+                            <constraint firstItem="o7E-Xe-9Dy" firstAttribute="top" secondItem="FMG-AN-rU4" secondAttribute="bottom" constant="30" id="NJJ-bk-vyp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="additionSwitch" destination="4mC-3m-HCU" id="GwL-SY-miK"/>
+                        <outlet property="bottomTextField" destination="o7E-Xe-9Dy" id="Nc7-SM-QUZ"/>
                         <outlet property="myLabel" destination="N3k-hU-6G8" id="yFz-iR-Kd5"/>
+                        <outlet property="topTextField" destination="FMG-AN-rU4" id="5Si-RB-Jcz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
